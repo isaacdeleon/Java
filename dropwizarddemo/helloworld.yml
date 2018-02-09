@@ -1,0 +1,3 @@
+template: Hello, %s!
+defaultName: Stranger
+swaggerBasePath: <a class="vglnk" href="http://localhost:8080" rel="nofollow"><span>http</span><span>://</span><span>localhost</span><span>:</span><span>9080</span></a>
