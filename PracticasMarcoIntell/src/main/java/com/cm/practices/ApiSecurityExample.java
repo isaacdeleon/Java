@@ -1,4 +1,4 @@
-package main.java.com.cm.practices;
+package com.cm.practices;
 
 import org.apache.commons.codec.binary.Base64;
 
