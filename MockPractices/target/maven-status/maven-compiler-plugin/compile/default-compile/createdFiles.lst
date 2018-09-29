@@ -1,0 +1,9 @@
+org/mockpractices/mockito/MathApplication.class
+org/mockpractices/mockito/dto/Portofolio.class
+org/mockpractices/mockito/dto/Stock.class
+org/mockpractices/mockito/powermock/ClassPowerMockPractice.class
+org/mockpractices/mockito/powermockito/Car.class
+org/mockpractices/mockito/service/impl/CalculatorServiceImpl.class
+org/mockpractices/mockito/service/StockService.class
+org/mockpractices/mockito/powermockito/Engine.class
+org/mockpractices/mockito/service/CalculatorService.class
