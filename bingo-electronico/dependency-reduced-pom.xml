@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>groupId</groupId>
+  <artifactId>bingo-electronico</artifactId>
+  <name>Bingo Electronico</name>
+  <version>1.0-SNAPSHOT</version>
+  <description>This project recieve charge notification to send MT</description>
+  <inceptionYear>2018</inceptionYear>
+  <developers>
+    <developer>
+      <id>isaac.laurrabaquio</id>
+      <name>Isaac Laurrabaquio</name>
+      <email>isaac.laurrabaquio@</email>
+    </developer>
+  </developers>
+  <organization>
+    <name>IDG, S.A. de C.V.</name>
+    <url>https://</url>
+  </organization>
+  <build>
+    <resources>
+      <resource>
+        <filtering>true</filtering>
+        <directory>src/main/resources</directory>
+        <excludes>
+          <exclude>*.yml</exclude>
+        </excludes>
+      </resource>
+      <resource>
+        <targetPath>${project.build.directory}</targetPath>
+        <filtering>true</filtering>
+        <directory>src/main/resources</directory>
+        <includes>
+          <include>*.yml</include>
+        </includes>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.0</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>2.3</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <transformers>
+                <transformer />
+                <transformer>
+                  <mainClass>org.ginger.BingoElectronicoApplication</mainClass>
+                </transformer>
+              </transformers>
+            </configuration>
+          </execution>
+        </executions>
+        <configuration>
+          <createDependencyReducedPom>true</createDependencyReducedPom>
+          <filters>
+            <filter>
+              <artifact>*:*</artifact>
+              <excludes>
+                <exclude>META-INF/*.SF</exclude>
+                <exclude>META-INF/*.DSA</exclude>
+                <exclude>META-INF/*.RSA</exclude>
+              </excludes>
+            </filter>
+          </filters>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <properties>
+    <swagger.version>1.5.1-M2</swagger.version>
+    <project.build.directory>target/</project.build.directory>
+    <file.encoding>UTF-8</file.encoding>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <application.context>/digitalv-notifications-consumer/v1</application.context>
+    <dropwizard.version>1.2.0</dropwizard.version>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <jdk.version>1.8</jdk.version>
+    <maven.compiler.source>1.8</maven.compiler.source>
+  </properties>
+</project>
+

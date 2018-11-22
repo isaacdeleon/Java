@@ -1,0 +1,13 @@
+
+swagger:
+  resourcePackage: org.ginger.resources
+  title: Bingo Electronico
+  version: v1
+  description: Interfaz provicional del proyecto de Bingo.
+  contact: Isaac Laurrabaquio
+  contactEmail: marcodeleonmx@gmail.com
+  contactUrl: https://
+  license: Apache 2.0
+  licenseUrl: https://www.apache.org/licenses/LICENSE-2.0
+
+alphabet: BINGO
