@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.infiniteskills.maven</groupId>
+    <artifactId>mavenpractices</artifactId>
+    <version>1.0.0</version>
+
+    <name>Learning Maven Examples</name>
+    <description>This project to learn maven</description>
+    <url>http://www.google.com</url>
+
+    <licenses>
+        <license>
+            <name>Apache License</name>
+            <comments>this is a comment to license</comments>
+        </license>
+    </licenses>
+
+    <organization>
+        <name>Ginger Company</name>
+        <url>www.gingermorra.com</url>
+    </organization>
+
+    <developers>
+        <developer>
+            <name>Isaac Laurrabaquio</name>
+            <email>marcodeleon@gmail.com</email>
+        </developer>
+    </developers>
+
+    <build>
+        <!-- para definir un directorio src que no sea el standard
+        <sourceDirectory>src/main/nonstandard/</sourceDirectory>
+        <directory>myTarget</directory> -->
+    </build>
+
+    <profiles>
+        <profile>
+            <id>production</id>
+            <build>
+                <directory>/Users/isaaclaurrabaquio/MyDevRepos/Java/mavenpractices/mavenpractice1/profileDirectoryTarget</directory>
+            </build>
+        </profile>
+    </profiles>
+</project>
