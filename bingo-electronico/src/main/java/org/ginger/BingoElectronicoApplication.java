@@ -9,6 +9,7 @@ import io.dropwizard.setup.Environment;
 import io.federecio.dropwizard.swagger.SwaggerBundle;
 import io.federecio.dropwizard.swagger.SwaggerBundleConfiguration;
 import org.ginger.controllers.BingoController;
+import org.ginger.cors.CORSResponseFilter;
 import org.ginger.resources.BingoResource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -74,8 +75,10 @@ public class BingoElectronicoApplication extends Application<BingoElectronicoCon
     @Override
     public void run(final BingoElectronicoConfiguration bingoElectronicoConfiguration,
                     final Environment environment) throws Exception {
+        final CORSResponseFilter corsFilter = new CORSResponseFilter();
         BingoController bingoController = new BingoController(bingoElectronicoConfiguration.getAlphabet());
         BingoResource bingoResource = new BingoResource(bingoController);
+        environment.jersey().register(corsFilter);
         environment.jersey().register(bingoResource);
     }
 }

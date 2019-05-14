@@ -50,7 +50,7 @@ public class BingoResource {
      */
     @GET
     @Path("/getNextRandom")
-    @Produces(MediaType.TEXT_HTML)
+    @Produces(MediaType.APPLICATION_JSON)
     @Timed
     @ApiOperation(value = "Operacion para obtener siguiente numero")
     @ApiResponses(value= {
