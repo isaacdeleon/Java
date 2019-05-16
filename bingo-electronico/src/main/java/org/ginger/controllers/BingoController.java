@@ -83,7 +83,7 @@ public class BingoController {
         } else if (!bingoNumberSet.contains(bingoNumber)) {
             bingoNumberSet.add(bingoNumber);
         } else {
-            bingoNumber = "Juego Finalizo";
+            bingoNumber = "Juego Finalizado";
         }
         return bingoNumber;
     }
