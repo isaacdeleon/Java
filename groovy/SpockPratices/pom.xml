@@ -15,7 +15,7 @@
         <groovy-all.version>2.4.15</groovy-all.version>
         <objenesis.version>2.5.1</objenesis.version>
         <cglib-nodep.version>3.2.4</cglib-nodep.version>
-        <commons-io.version>2.6</commons-io.version>
+        <commons-io.version>2.7</commons-io.version>
         <h2database.version>1.4.196</h2database.version>
         <spock-reports.version>1.6.0</spock-reports.version>
         <rest-assured.version>3.0.7</rest-assured.version>
